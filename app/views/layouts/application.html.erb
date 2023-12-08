@@ -10,6 +10,23 @@
   </head>
 
   <body>
+
+    <% flash.each do |type, msg| %>
+      <% if flash[:info] %>
+        <div class="flash is-info">
+          <%= msg %>
+        </div>
+      <% elsif flash[:warning] %>
+        <div class="flash is-warning">
+          <%= msg %>
+        </div>
+      <% else %>
+        <div class="flash is-error">
+          <%= msg %>
+        </div>
+      <% end %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
