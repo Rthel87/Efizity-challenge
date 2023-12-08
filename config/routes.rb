@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   root 'news#index'
 
-  resources :news, only: [:index, :create, :new]
+  resources :news, except: [:destroy, :edit, :update]
 end
