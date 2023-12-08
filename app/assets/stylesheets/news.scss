@@ -7,6 +7,7 @@ $font-body: 'Arimo', sans-serif;
 $font-logo: 'Space Grotesk', sans-serif;
 $nav-color: #26577C;
 $background: #F1EFEF;
+$footer-back: #C2DEDC;
 $mx-1: 0 0.75rem;
 $py-1: 0.75rem 0;
 
@@ -55,6 +56,25 @@ h1.title {
   font-weight: bold;
 }
 
+.control {
+  z-index: 2;
+}
+
+.input {
+  font-size: 1rem;
+  height: 1.5rem;
+  max-width: 100%;
+  line-height: 1.5;
+  padding: 0.5rem 0.75rem;
+  border: 0.0625rem solid transparent;
+  border-radius: 0.25rem;
+  border-color: #9AC5F4;
+}
+
+.input:hover {
+    border-color: #0E2954;
+  }
+
 .headline {
   font-family: $font-title;
   font-weight: 400;
@@ -63,4 +83,19 @@ h1.title {
 .body-news {
   font-family: $font-body;
   font-weight: 400;
+}
+
+.footer {
+  background-color: $footer-back;
+  padding: 1rem 0;
+
+  hr {
+    line-height: 0.8;
+    color: #B6BBC4;
+  }
+}
+
+.footer-info {
+  font-family: $font-body;
+  text-align: center;
 }
