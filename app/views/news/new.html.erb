@@ -1,0 +1,23 @@
+<div class="">
+  <h1>Agregar nueva noticia</h1>
+  <%= form_with model: @news, url: news_index_url, method: :post do |n| %>
+
+    <%= n.label :headline, "Titular:" %>
+    <%= n.text_field :headline %>
+
+    <%= n.label :byline, "Bajada:" %>
+    <%= n.text_area :byline, size: "70x5" %>
+
+    <%= n.label :author, "Author:" %>
+    <%= n.text_field :author %>
+
+    <%= n.label :body, "Cuerpo:" %>
+    <%= n.text_area :body, size: "100x10" %>
+
+    <%= n.label :picture_url, "Dirección de la imagen a mostrar:" %>
+    <%= n.text_field :picture_url %>
+
+    <%= n.submit "Agregar" %>
+
+  <% end %>
+</div>
