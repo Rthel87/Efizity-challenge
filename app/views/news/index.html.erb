@@ -1,8 +1,8 @@
-<div>
+<section>
   <% @news_list.each do |new| %>
     <div class="">
       <img src="<%= new.picture_url %>" alt="<%= new.id %>">
       <h5><%= new.headline %></h5>
     </div>
   <% end %>
-</div>
+</section>
