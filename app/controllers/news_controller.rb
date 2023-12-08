@@ -17,6 +17,7 @@ class NewsController < ApplicationController
       redirect_to news_index_url
     else
       flash[:error] = "Error. No se ha guardado la noticia. Verifique los datos ingresados."
+      redirect_to news_index_url
     end
   end
 
