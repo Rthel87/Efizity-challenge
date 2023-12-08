@@ -1,9 +1,6 @@
 class NewsController < ApplicationController
   def index
     page = params[:page].to_i
-    puts page
-    #page = query[:page]
-    #puts page
     news_per_page = 10
     if page.nil? || page == 0
       @news_list = News.all.limit(news_per_page)

@@ -1,6 +1,6 @@
 <div class="">
   <h1>Agregar nueva noticia</h1>
-  <%= form_with model: @news, url: '/news', method: :post do |n| %>
+  <%= form_with model: @news, url: news_index_url, method: :post do |n| %>
 
     <%= n.label :headline, "Titular:" %>
     <%= n.text_field :headline %>
