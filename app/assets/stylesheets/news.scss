@@ -2,6 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+$font-title: 'Bebas Neue', sans-serif;
+$font-body: 'Arimo', sans-serif;
+$nav-color: #26577C;
+$background: #F1EFEF;
+
+
+.container {
+  max-width: 95rem;
+  margin: 0 auto 0 auto;
+}
+
+.navbar {
+  background-color: $nav-color;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.navbar-logo {
+  color: $background;
+  font-size: 2rem;
+  margin: 1.125rem 0 1.125rem 0;
+  padding: 0 0.875rem 0 0.875rem;
+}
+
+.principal {
+  background-color: $background;
+}
 
 .headline {
   font-family: 'Bebas Neue', sans-serif;

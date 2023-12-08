@@ -13,6 +13,7 @@
   </head>
 
   <body>
+    <%= render 'partials/navbar' %>
 
     <% flash.each do |type, msg| %>
       <% if flash[:info] %>
@@ -30,6 +31,9 @@
       <% end %>
     <% end %>
 
-    <%= yield %>
+    <div class="container principal">
+      <%= yield %>
+    </div>
+    
   </body>
 </html>
