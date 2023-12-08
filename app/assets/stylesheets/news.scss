@@ -4,9 +4,11 @@
 
 $font-title: 'Bebas Neue', sans-serif;
 $font-body: 'Arimo', sans-serif;
+$font-logo: 'Space Grotesk', sans-serif;
 $nav-color: #26577C;
 $background: #F1EFEF;
-
+$mx-1: 0 0.75rem;
+$py-1: 0.75rem 0;
 
 .container {
   max-width: 95rem;
@@ -21,7 +23,9 @@ $background: #F1EFEF;
 
 .navbar-logo {
   color: $background;
-  font-size: 2rem;
+  font-family: $font-logo;
+  font-size: 2.5rem;
+  font-weight: 700;
   margin: 1.125rem 0 1.125rem 0;
   padding: 0 0.875rem 0 0.875rem;
 }
@@ -30,12 +34,33 @@ $background: #F1EFEF;
   background-color: $background;
 }
 
+.title {
+  margin: $mx-1;
+  padding: 1.25rem 0 1.25rem 0;
+}
+
+h1.title {
+  font-size: 2rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin: $mx-1;
+}
+
+.label {
+  padding: $py-1;
+  font-style: italic;
+  font-weight: bold;
+}
+
 .headline {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: $font-title;
   font-weight: 400;
 }
 
 .body-news {
-  font-family: 'Arimo', sans-serif;
+  font-family: $font-body;
   font-weight: 400;
 }

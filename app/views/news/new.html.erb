@@ -1,21 +1,41 @@
 <div>
-  <h1>Agregar nueva noticia</h1>
+  <h1 class="title">Agregar nueva noticia</h1>
   <%= form_with model: @news, url: news_index_url, method: :post do |n| %>
 
-    <%= n.label :headline, "Titular:" %>
-    <%= n.text_field :headline %>
+    <div class="field">
+      <%= n.label :headline, "Titular:", :class => "label" %>
+      <div class="control">
+        <%= n.text_field :headline, :class => "input" %>
+      </div>
+    </div>
 
-    <%= n.label :byline, "Bajada:" %>
-    <%= n.text_area :byline, size: "70x5" %>
+    <div class="field">
+      <%= n.label :byline, "Bajada:", :class => "label" %>
+      <div class="control">
+        <%= n.text_area :byline, size: "70x5", :class => "input" %>
+      </div>
+    </div>
 
-    <%= n.label :author, "Author:" %>
-    <%= n.text_field :author %>
+    <div class="field">
+      <%= n.label :author, "Author:", :class => "label" %>
+      <div class="control">
+        <%= n.text_field :author, :class => "input" %>
+      </div>
+    </div>
 
-    <%= n.label :body, "Cuerpo:" %>
-    <%= n.text_area :body, size: "100x10" %>
+    <div class="field">
+      <%= n.label :body, "Cuerpo:", :class => "label" %>
+      <div class="control">
+        <%= n.text_area :body, size: "100x10", :class => "input" %>
+      </div>
+    </div>
 
-    <%= n.label :picture_url, "Dirección de la imagen a mostrar:" %>
-    <%= n.text_field :picture_url %>
+    <div class="field">
+      <%= n.label :picture_url, "Dirección de la imagen a mostrar:", :class => "label" %>
+      <div class="control">
+        <%= n.text_field :picture_url, :class => "input" %>
+      </div>
+    </div>
 
     <%= n.submit "Agregar" %>
 
