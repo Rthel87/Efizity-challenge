@@ -2,42 +2,48 @@
   <h1 class="title">Agregar nueva noticia</h1>
   <%= form_with model: @news, url: news_index_url, method: :post do |n| %>
 
-    <div class="field">
-      <%= n.label :headline, "Titular:", :class => "label" %>
-      <div class="control">
-        <%= n.text_field :headline, :class => "input" %>
-      </div>
-    </div>
+    <div class="form-grid">
 
-    <div class="field">
-      <%= n.label :byline, "Bajada:", :class => "label" %>
-      <div class="control">
-        <%= n.text_area :byline, size: "70x5", :class => "input" %>
+      <div class="field">
+        <%= n.label :headline, "Titular:", :class => "label" %>
+        <div class="control">
+          <%= n.text_field :headline, :class => "input form-input" %>
+        </div>
       </div>
-    </div>
 
-    <div class="field">
-      <%= n.label :author, "Author:", :class => "label" %>
-      <div class="control">
-        <%= n.text_field :author, :class => "input" %>
+      <div class="field">
+        <%= n.label :picture_url, "Enlace de la imagen a mostrar:", :class => "label" %>
+        <div class="control">
+          <%= n.text_field :picture_url, :class => "input form-input" %>
+        </div>
       </div>
-    </div>
 
-    <div class="field">
-      <%= n.label :body, "Cuerpo:", :class => "label" %>
-      <div class="control">
-        <%= n.text_area :body, size: "100x10", :class => "input" %>
+      <div class="field">
+        <%= n.label :author, "Author:", :class => "label" %>
+        <div class="control">
+          <%= n.text_field :author, :class => "input form-input" %>
+        </div>
       </div>
-    </div>
 
-    <div class="field">
-      <%= n.label :picture_url, "Dirección de la imagen a mostrar:", :class => "label" %>
-      <div class="control">
-        <%= n.text_field :picture_url, :class => "input" %>
+      <div class="field form-byline">
+        <%= n.label :byline, "Bajada:", :class => "label" %>
+        <div class="control">
+          <%= n.text_field :byline, :class => "input form-input" %>
+        </div>
       </div>
-    </div>
 
-    <%= n.submit "Agregar" %>
+      <div class="field form-body">
+        <%= n.label :body, "Cuerpo de la noticia:", :class => "label" %>
+        <div class="control">
+          <%= n.text_area :body, :class => "input text-area" %>
+        </div>
+      </div>
+
+      <div class="form-btn btn-grid">
+        <%= n.submit "Agregar", :class => "button" %>
+      </div>
+
+    </div>
 
   <% end %>
 </section>

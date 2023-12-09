@@ -44,6 +44,20 @@ h1.title {
   font-size: 2rem;
 }
 
+.form-grid {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: repeat(4, 6.25rem);
+}
+
+.form-byline {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.form-body {
+  grid-area: 2 / 2 / 4 / 3;
+}
+
 .field {
   display: flex;
   flex-direction: column;
@@ -72,8 +86,27 @@ h1.title {
 }
 
 .input:hover {
-    border-color: #0E2954;
-  }
+  border-color: #0E2954;
+}
+
+.form-input {
+  width: 95%;
+}
+
+.text-area {
+  height: 7.65rem;
+  width: 95%;
+  resize: none;
+}
+
+.form-btn {
+  grid-area: 4 / 1 / 5 / 3;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
 
 .headline {
   font-family: $font-title;
