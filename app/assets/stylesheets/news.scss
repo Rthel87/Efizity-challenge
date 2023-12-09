@@ -52,6 +52,10 @@ h1.title {
   font-size: 2rem;
 }
 
+h4.title {
+  text-align: justify;
+}
+
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(4, 23.75rem);
