@@ -5,7 +5,9 @@
       <div class="card">
         <div class="card-image">
           <figure class="image is-image-card">
-            <img src="<%= new.picture_url %>" alt="<%= new.picture_url %>" data="<%= new.id %>">
+            <a href="<%= "/news/" + new.id.to_s %>">
+              <img src="<%= new.picture_url %>" alt="<%= new.picture_url %>" data="<%= new.id %>">
+            </a>
           </figure>
         </div>
         <div class="card-content">
