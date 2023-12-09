@@ -8,6 +8,12 @@ $font-logo: 'Space Grotesk', sans-serif;
 $nav-color: #26577C;
 $background: #F1EFEF;
 $footer-back: #C2DEDC;
+$input: #9AC5F4;
+$input-hover: #0E2954;
+$primary: #0174BE;
+$primary-hover: #0C356A;
+$secondary: #B9B4C7;
+$secondary-hover: #5C5470;
 $mx-1: 0 0.75rem;
 $py-1: 0.75rem 0;
 
@@ -82,11 +88,11 @@ h1.title {
   padding: 0.5rem 0.75rem;
   border: 0.0625rem solid transparent;
   border-radius: 0.25rem;
-  border-color: #9AC5F4;
+  border-color: $input;
 }
 
 .input:hover {
-  border-color: #0E2954;
+  border-color: $input-hover;
 }
 
 .form-input {
@@ -106,6 +112,64 @@ h1.title {
 .btn-grid {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
+  align-content: center;
+  justify-content: space-around;
+}
+
+.btn-area {
+  grid-column: 3 / 9;
+}
+
+.btn-dist {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+%button-base {
+  border-width: 0.0625rem;
+  border-color: $input-hover;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  width: 25%;
+  font-size: 1.125rem;
+}
+
+.button {
+  @extend %button-base;
+
+  a, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+a.button {
+  @extend %button-base;
+  text-decoration: none;
+  border: 0.0625rem solid;
+}
+
+.is-primary {
+  background-color: $primary;
+  color: #fff;
+}
+
+.is-primary:hover {
+  background-color: $primary-hover;
+}
+
+.is-secondary {
+  background-color: $secondary;
+  color: $input-hover;
+}
+
+.is-secondary:hover {
+  background-color: $secondary-hover;
+  color: #fff;
 }
 
 .headline {
