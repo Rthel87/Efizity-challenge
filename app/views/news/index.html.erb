@@ -1,8 +1,21 @@
 <section>
-  <% @news_list.each do |new| %>
-    <div class="">
-      <img src="<%= new.picture_url %>" alt="<%= new.id %>">
-      <h5><%= new.headline %></h5>
-    </div>
-  <% end %>
+  <h1 class="title">Listado de Noticias</h1>
+  <div class="cards-grid">
+    <% @news_list.each do |new| %>
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-image-card">
+            <img src="<%= new.picture_url %>" alt="<%= new.picture_url %>" data="<%= new.id %>">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <h5><%= new.headline %></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </section>
