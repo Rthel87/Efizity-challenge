@@ -1,0 +1,32 @@
+<section>
+
+  <figure class="image is-image-news">
+    <img src="<%= @news.picture_url %>" alt="<%= @news.picture_url %>">
+  </figure>
+
+  <article class="container principal">
+
+    <h1 class="headline"><%= @news.headline %></h1>
+
+    <p class="byline"><%= @news.byline %></p>
+
+    <div class="news-grid">
+      <div class="author">
+        <p>Autor: <%= @news.author %></p>
+      </div>
+      <div class="date-news">
+        <p>Noticia agregada el: <%= @date %></p>
+      </div>
+    </div>
+
+    <p class="body-news"><%= @news.body %></p>
+
+    <div class="btn-grid pb-2">
+      <div class="btn-area btn-dist">
+        <a href="/" class="button is-primary">Volver al listado de noticias</a>
+      </div>
+    </div>
+
+  </article>
+
+</section>
