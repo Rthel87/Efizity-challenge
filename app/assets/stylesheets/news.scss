@@ -36,12 +36,40 @@ $py-1: 0.75rem 0;
 }
 
 .navbar-logo {
+  display: inline-block;
   color: $background;
   font-family: $font-logo;
   font-size: 2.5rem;
   font-weight: 700;
   margin: 1.125rem 0 1.125rem 0;
-  padding: 0 0.875rem 0 0.875rem;
+  padding: 0 2.5rem 0 0.875rem;
+}
+
+%a-reset {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-items {
+  display: inline;
+  color: #fff;
+  font-family: $font-logo;
+  font-size: 1.25rem;
+
+  ul {
+    display: inline;
+    list-style-type: none;
+    padding: 1rem 1.25rem;
+    margin: 0;
+
+    a, a:visited, a:hover, a:active {
+      @extend %a-reset;
+    }
+  }
+
+  ul:hover {
+    background-color: #0E185F;
+  }
 }
 
 /* Classes for the main page */
