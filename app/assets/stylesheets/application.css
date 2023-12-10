@@ -21,7 +21,7 @@ html {
   font-weight: 500;
 }
 
-body {
+body, figure {
   margin: 0rem;
   padding: 0rem;
 }

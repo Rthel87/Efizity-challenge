@@ -15,12 +15,19 @@ $primary-hover: #0C356A;
 $secondary: #B9B4C7;
 $secondary-hover: #5C5470;
 $mx-1: 0 0.75rem;
+$mx-2: 0 1.5rem;
 $py-1: 0.75rem 0;
 
 .container {
   max-width: 95rem;
   margin: 0 auto 0 auto;
 }
+
+.principal {
+  background-color: $background;
+}
+
+/* Classes for navbar */
 
 .navbar {
   background-color: $nav-color;
@@ -37,15 +44,14 @@ $py-1: 0.75rem 0;
   padding: 0 0.875rem 0 0.875rem;
 }
 
-.principal {
-  background-color: $background;
+/* Classes for the main page */
+%title {
+  padding: 1.25rem 0 1.25rem 0;
 }
-
-/* Classes for the main page*/
 
 .title {
   margin: $mx-1;
-  padding: 1.25rem 0 1.25rem 0;
+  @extend %title;
 }
 
 h1.title {
@@ -187,7 +193,6 @@ h4.title {
 
 %button-base {
   border-width: 0.0625rem;
-  border-color: $input-hover;
   border-radius: 0.25rem;
   cursor: pointer;
   text-align: center;
@@ -199,6 +204,7 @@ h4.title {
 
 .button {
   @extend %button-base;
+  border-color: $input-hover;
 
   a, a:visited, a:hover, a:active {
     text-decoration: none;
@@ -210,6 +216,7 @@ a.button {
   @extend %button-base;
   text-decoration: none;
   border: 0.0625rem solid;
+  border-color: $input-hover;
 }
 
 .is-primary {
@@ -233,14 +240,72 @@ a.button {
 
 /* Classes for display the news content*/
 
+.is-image-news {
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+
+  img {
+    height: 37.5rem;
+    width: auto;
+  }
+}
+
 .headline {
   font-family: $font-title;
   font-weight: 400;
+  font-size: 2.5rem;
+  @extend %title;
+  margin: $mx-2;
+}
+
+.byline {
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: 2rem;
+  margin: $mx-2;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+}
+
+.author {
+  grid-column: 1 / 2;
+  display: flex;
+  flex-direction: row;
+
+  p {
+    font-style: italic;
+    margin: $mx-2;
+    padding: $py-1;
+  }
+}
+
+.date-news {
+  grid-column: 3 / 4;
+  display: flex;
+  flex-direction: row-reverse;
+
+  p {
+    font-style: italic;
+    color: gray;
+    margin: $mx-2;
+    padding: $py-1;
+  }
 }
 
 .body-news {
   font-family: $font-body;
   font-weight: 400;
+  margin: $mx-2;
+  text-align: justify;
+  padding-bottom: 1.5rem;
+}
+
+.pb-2 {
+  padding-bottom: 1.5rem;
 }
 
 /* Classes for footer */
