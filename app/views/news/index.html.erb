@@ -1,4 +1,4 @@
-<section>
+<section class="container principal">
   <h1 class="title">Listado de Noticias</h1>
   <div class="cards-grid">
     <% @news_list.each do |new| %>
@@ -13,7 +13,7 @@
         <div class="card-content">
           <div class="media">
             <div class="media-content">
-              <h4 class="title"><%= new.headline %></h5>
+              <h4 class="title"><%= new.headline %></h4>
             </div>
           </div>
         </div>
