@@ -9,6 +9,7 @@
         <div class="control">
           <%= n.text_field :headline, :class => "input form-input" %>
         </div>
+        <p id="headline_error" class="help is-danger"></p>
       </div>
 
       <div class="field">
@@ -16,6 +17,7 @@
         <div class="control">
           <%= n.text_field :picture_url, :class => "input form-input" %>
         </div>
+        <p id="picture_url_error" class="help is-danger"></p>
       </div>
 
       <div class="field">
@@ -23,6 +25,7 @@
         <div class="control">
           <%= n.text_field :author, :class => "input form-input" %>
         </div>
+        <p id="author_error" class="help is-danger"></p>
       </div>
 
       <div class="field form-byline">
@@ -30,6 +33,7 @@
         <div class="control">
           <%= n.text_field :byline, :class => "input form-input" %>
         </div>
+        <p id="byline_error" class="help is-danger"></p>
       </div>
 
       <div class="field form-body">
@@ -37,6 +41,7 @@
         <div class="control">
           <%= n.text_area :body, :class => "input text-area" %>
         </div>
+        <p id="body_error" class="help is-danger"></p>
       </div>
 
       <div class="form-btn btn-grid">
@@ -50,3 +55,5 @@
 
   <% end %>
 </section>
+
+<%= javascript_pack_tag 'form' %>

@@ -1,12 +1,6 @@
 class NewsController < ApplicationController
   def index
-    page = params[:page].to_i
-    news_per_page = 10
-    if page.nil? || page == 0
-      @news_list = News.all.limit(news_per_page)
-    else
-      @news_list = News.all.offset(news_per_page*(page-1)).limit(news_per_page*page)
-    end
+    @news_list = News.all
   end
 
   def create
