@@ -100,6 +100,49 @@ gem update --system
 gem install bundler
 ```
 
+## Clonar, instalar dependencias y desplegar en entorno de desarrollo
+Clonar repositorio e ingresar a su directorio:
+```
+git clone https://github.com/Rthel87/Efizity-challenge.git efizity-challenge
+cd efizity-challenge
+```
+Generar archivo de variables de entorno para la aplicación copiando archivo .env_example a .env y editarlo:
+```
+cp .env_example .env
+nano .env
+```
+cambiar valores de variables de entorno, ejemplo:
+```
+DB_USERNAME='nombre_usuario_BD'
+DB_PASSWORD='password_del_usuario_BD'
+DB_HOST='el_host_de_la_BD' # En instalaciones locales: localhost
+```
+Para instalar las dependencias, se debe tener instalada la gema *bundler* (ver las instrucciones de instalación en la sección __Instalación__):
+```
+bundle install
+```
+Crear la base de datos y aplicar las migraciones:
+```
+rails db:create db:migrate
+```
+Desplegar la aplicación en entorno de desarrollo:
+```
+rails server
+```
+
+## Pruebas de la aplicación
+Para ejecutar las pruebas automatizadas de la aplicación, es necesario generar la base de datos de *pruebas* con los siguientes comandos:
+```
+rails db:test:purge
+rails db:prepare
+```
+Luego, ejecutar los test:
+```
+rails test
+```
+
+
+
 # README
 
 This README would normally document whatever steps are necessary to get the
