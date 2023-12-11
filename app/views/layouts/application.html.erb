@@ -17,15 +17,15 @@
 
     <% flash.each do |type, msg| %>
       <% if flash[:info] %>
-        <div class="flash is-info">
+        <div class="notification is-success is-over">
           <%= msg %>
         </div>
-      <% elsif flash[:warning] %>
-        <div class="flash is-warning">
+      <% elsif flash[:error] %>
+        <div class="notification is-error is-over">
           <%= msg %>
         </div>
       <% else %>
-        <div class="flash is-error">
+        <div class="notification is-warning is-over">
           <%= msg %>
         </div>
       <% end %>

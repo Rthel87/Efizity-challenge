@@ -75,6 +75,7 @@ $py-1: 0.75rem 0;
 }
 
 /* Classes for the main page */
+
 %title {
   padding: 1.25rem 0 1.25rem 0;
 }
@@ -140,6 +141,43 @@ h4.title {
   align-items: flex-start;
   display: flex;
   text-align: inherit;
+}
+
+@keyframes disappear {
+  from {opacity: 1.0}
+  to {opacity: 0.1}
+}
+
+.notification {
+  background-color: #f5f5f5;
+  border-radius: .375rem;
+  position: relative;
+  padding: 1.25rem 2.5rem 1.25rem 1.5rem;
+  animation-name: disappear;
+  animation-duration: 3s;
+  animation-delay: 5s;
+}
+
+.notification.is-success {
+  background-color: $success;
+  color: #fff;
+}
+
+.notification.is-error {
+  background-color: $danger;
+  color: #fff;
+}
+
+.notification.is-warning {
+  background-color: rgba(255, 193, 7, 1);
+  color: #fff;
+}
+
+.is-over {
+  position: absolute;
+  top: 21.5%;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 
