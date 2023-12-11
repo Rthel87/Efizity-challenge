@@ -144,14 +144,8 @@ h4.title {
 }
 
 @keyframes disappear {
-  from {
-    background-color: $success;
-    color: #fff;
-  }
-  to {
-    background-color: rgba(25, 133, 83, 0.1);
-    color: rgba(253, 253, 253, 0.2);
-  }
+  from {opacity: 1.0}
+  to {opacity: 0.1}
 }
 
 .notification {
