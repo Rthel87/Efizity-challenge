@@ -27,6 +27,8 @@
       </div>
     </div>
 
+    <h2 class="title">Comentarios:</h2>
+
     <%= form_with model: @comment, url: comment_index_url, method: :post do |c| %>
 
       <div class="comment-grid">
@@ -53,6 +55,15 @@
 
       </div>
 
+    <% end %>
+
+    <% @comments.each do |comment| %>
+      <div class="">
+        <p><%= comment.username %></p>
+      </div>
+      <div class="">
+        <p><%= comment.comment %></p>
+      </div>
     <% end %>
 
   </article>
