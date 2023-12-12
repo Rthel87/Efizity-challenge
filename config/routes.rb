@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root 'news#index'
 
   resources :news, except: [:destroy, :edit, :update]
+  resources :comment, only: [:create]
 end
