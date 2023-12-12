@@ -27,6 +27,53 @@
       </div>
     </div>
 
+    <h2 class="title">Comentarios:</h2>
+
+    <%= form_with model: @comment, url: comment_index_url, method: :post do |c| %>
+
+      <div class="comment-grid">
+
+        <div class="field">
+          <%= c.label :username, 'Usuario:', :class => "label" %>
+          <div class="control">
+            <%= c.text_field :username, :class =>"input form-input", disabled: true %>
+          </div>
+        </div>
+
+        <div class="field">
+          <%= c.label :comment, 'Comentario:', :class => "label" %>
+          <div class="control">
+            <%= c.text_area :comment, :class => "input text-area is-body" %>
+          </div>
+          <p id="comment-error" class="help is-danger"></p>
+        </div>
+
+        <%= c.hidden_field :news_id, :value => @news.id %>
+        <%= c.hidden_field :username, :value => @comment.username %>
+
+        <div class="field is-comment">
+          <div class="btn-comment">
+            <%= c.submit "Agregar", :class => "button is-primary" %>
+          </div>
+        </div>
+
+      </div>
+
+    <% end %>
+
+    <div class="comment-list">
+      <% @comments.each do |comment| %>
+        <div class="comment-layout">
+          <p><%= comment.username %></p>
+          <p><%= comment.comment %></p>
+        </div>
+      <% end %>
+    </div>
+
+
   </article>
+
+  <%= javascript_pack_tag 'notification' %>
+  <%= javascript_pack_tag 'comments' %>
 
 </section>

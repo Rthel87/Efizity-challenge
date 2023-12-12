@@ -1,3 +1,5 @@
+const { isEmpty, addDangerClass, removeDangerClass, isValidInput } = require('./functions.js');
+
 // select elements
 const headline = document.getElementById('news_headline');
 const byline = document.getElementById('news_byline');
@@ -32,32 +34,8 @@ const msgError = {
   }
 }
 
-const isEmpty = (value) => {
-  return value.trim().length === 0;
-}
-
-const addDangerClass = (input, inputError, msg) => {
-  input.classList.add('is-danger');
-  inputError.innerHTML = msg;
-};
-
-const removeDangerClass = (input, inputError) => {
-  input.classList.remove('is-danger');
-  inputError.innerHTML = '';
-};
-
 
 // validations
-
-const isValidInput = (input, inputError, msg) => {
-  if (isEmpty(input.value)) {
-    addDangerClass(input, inputError, msg);
-    return false;
-  } else {
-    removeDangerClass(input, inputError);
-    return true;
-  }
-}
 
 const isValidUrl = () => {
   cors = new Headers([['Access-Control-Allow-Origin', 'origin']]);

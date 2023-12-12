@@ -23,6 +23,9 @@ class NewsController < ApplicationController
     @news = News.find(params[:id])
     create_date = @news.created_at
     @date = number_date(create_date.day) + '-' + number_date(create_date.month) + '-' + create_date.year.to_s
+    @comments = @news.comments
+    @comment = Comment.new
+    @comment.username = '@user' + rand(1000).to_s
   end
 
   private

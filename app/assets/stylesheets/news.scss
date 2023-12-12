@@ -187,6 +187,7 @@ h4.title {
   top: 21.5%;
   left: 50%;
   transform: translate(-50%);
+  z-index: 10;
 }
 
 
@@ -314,12 +315,16 @@ a.button {
   border-color: $input-hover;
 }
 
-.button[disabled] {
+%disabled {
   background-color: #DFD3C3;
   border-color: #DFD3C3;
-  box-shadow: none;
   cursor: not-allowed;
   color: #7a7a7a;
+}
+
+.button[disabled] {
+  @extend %disabled;
+  box-shadow: none;
 }
 
 .is-primary {
@@ -410,6 +415,38 @@ a.button {
 
 .pb-2 {
   padding-bottom: 1.5rem;
+}
+
+.comment-grid {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  column-gap: 0.625rem;
+}
+
+.is-comment {
+  position: relative;
+  top: 2.875rem;
+}
+
+.btn-comment {
+  input {
+    width: 80%;
+  }
+}
+
+.input[disabled] {
+  @extend %disabled;
+}
+
+.comment-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem 1.5rem 2rem;
+}
+
+.comment-layout {
+  display: grid;
+  grid-template-columns: 20% 80%;
 }
 
 /* Classes for footer */
