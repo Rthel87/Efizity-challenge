@@ -36,21 +36,23 @@
         <div class="field">
           <%= c.label :username, 'Usuario:', :class => "label" %>
           <div class="control">
-            <%= c.text_field :username, :class =>"input form-input" %>
+            <%= c.text_field :username, :class =>"input form-input", disabled: true %>
           </div>
         </div>
 
         <div class="field">
           <%= c.label :comment, 'Comentario:', :class => "label" %>
           <div class="control">
-            <%= c.text_area :comment, :class => "input text-area" %>
+            <%= c.text_area :comment, :class => "input text-area is-body" %>
           </div>
         </div>
 
         <%= c.hidden_field :news_id, :value => @news.id %>
 
-        <div class="btn-area btn-dist">
-          <%= c.submit "Enviar", :class => "button is-primary" %>
+        <div class="field is-comment">
+          <div class="btn-comment">
+            <%= c.submit "Agregar", :class => "button is-primary" %>
+          </div>
         </div>
 
       </div>
