@@ -1,0 +1,59 @@
+<section class="container principal">
+  <h1 class="title">Agregar nueva noticia</h1>
+  <%= form_with model: @news, url: news_index_url, method: :post do |n| %>
+
+    <div class="form-grid">
+
+      <div class="field">
+        <%= n.label :headline, "Titular:", :class => "label" %>
+        <div class="control">
+          <%= n.text_field :headline, :class => "input form-input" %>
+        </div>
+        <p id="headline_error" class="help is-danger"></p>
+      </div>
+
+      <div class="field">
+        <%= n.label :picture_url, "Enlace de la imagen a mostrar:", :class => "label" %>
+        <div class="control">
+          <%= n.text_field :picture_url, :class => "input form-input" %>
+        </div>
+        <p id="picture_url_error" class="help is-danger"></p>
+      </div>
+
+      <div class="field">
+        <%= n.label :author, "Author:", :class => "label" %>
+        <div class="control">
+          <%= n.text_field :author, :class => "input form-input" %>
+        </div>
+        <p id="author_error" class="help is-danger"></p>
+      </div>
+
+      <div class="field form-byline">
+        <%= n.label :byline, "Bajada:", :class => "label" %>
+        <div class="control">
+          <%= n.text_area :byline, :class => "input text-area" %>
+        </div>
+        <p id="byline_error" class="help is-danger"></p>
+      </div>
+
+      <div class="field form-body">
+        <%= n.label :body, "Cuerpo de la noticia:", :class => "label" %>
+        <div class="control">
+          <%= n.text_area :body, :class => "input text-area is-body" %>
+        </div>
+        <p id="body_error" class="help is-danger"></p>
+      </div>
+
+      <div class="form-btn btn-grid">
+        <div class="btn-area btn-dist">
+          <a href="/" class="button is-secondary">Cancelar</a>
+          <%= n.submit "Agregar", :class => "button is-primary" %>
+        </div>
+      </div>
+
+    </div>
+
+  <% end %>
+</section>
+
+<%= javascript_pack_tag 'form' %>

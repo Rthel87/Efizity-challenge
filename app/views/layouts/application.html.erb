@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EfizityChallenge</title>
+    <title>Efizity Challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Bebas+Neue&family=Open+Sans:wght@500&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +13,26 @@
   </head>
 
   <body>
+    <%= render 'partials/navbar' %>
+
+    <% flash.each do |type, msg| %>
+      <% if flash[:info] %>
+        <div class="notification is-success is-over">
+          <%= msg %>
+        </div>
+      <% elsif flash[:error] %>
+        <div class="notification is-error is-over">
+          <%= msg %>
+        </div>
+      <% else %>
+        <div class="notification is-warning is-over">
+          <%= msg %>
+        </div>
+      <% end %>
+    <% end %>
+
     <%= yield %>
+
+    <%= render 'partials/footer' %>
   </body>
 </html>
