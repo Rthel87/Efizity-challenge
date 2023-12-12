@@ -45,6 +45,7 @@
           <div class="control">
             <%= c.text_area :comment, :class => "input text-area is-body" %>
           </div>
+          <p id="comment-error" class="help is-danger"></p>
         </div>
 
         <%= c.hidden_field :news_id, :value => @news.id %>
@@ -71,5 +72,6 @@
   </article>
 
   <%= javascript_pack_tag 'notification' %>
+  <%= javascript_pack_tag 'comments' %>
 
 </section>
