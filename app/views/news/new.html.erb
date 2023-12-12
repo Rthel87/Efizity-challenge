@@ -31,7 +31,7 @@
       <div class="field form-byline">
         <%= n.label :byline, "Bajada:", :class => "label" %>
         <div class="control">
-          <%= n.text_field :byline, :class => "input form-input" %>
+          <%= n.text_area :byline, :class => "input text-area" %>
         </div>
         <p id="byline_error" class="help is-danger"></p>
       </div>
@@ -39,7 +39,7 @@
       <div class="field form-body">
         <%= n.label :body, "Cuerpo de la noticia:", :class => "label" %>
         <div class="control">
-          <%= n.text_area :body, :class => "input text-area" %>
+          <%= n.text_area :body, :class => "input text-area is-body" %>
         </div>
         <p id="body_error" class="help is-danger"></p>
       </div>

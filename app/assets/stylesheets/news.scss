@@ -242,9 +242,13 @@ h4.title {
 }
 
 .text-area {
-  height: 7.65rem;
+  font-family: 'Open sans', sans-serif;
   width: 95%;
   resize: none;
+}
+
+.is-body {
+  height: 7.65rem;
 }
 
 .help {
@@ -373,6 +377,7 @@ a.button {
 .author {
   grid-column: 1 / 2;
   display: flex;
+  color: gray;
   flex-direction: row;
 
   p {
