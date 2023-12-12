@@ -61,14 +61,15 @@
 
     <% end %>
 
-    <% @comments.each do |comment| %>
-      <div class="">
-        <p><%= comment.username %></p>
-      </div>
-      <div class="">
-        <p><%= comment.comment %></p>
-      </div>
-    <% end %>
+    <div class="comment-list">
+      <% @comments.each do |comment| %>
+        <div class="comment-layout">
+          <p><%= comment.username %></p>
+          <p><%= comment.comment %></p>
+        </div>
+      <% end %>
+    </div>
+
 
   </article>
 

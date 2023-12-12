@@ -438,6 +438,17 @@ a.button {
   @extend %disabled;
 }
 
+.comment-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem 1.5rem 2rem;
+}
+
+.comment-layout {
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
 /* Classes for footer */
 
 .footer {
